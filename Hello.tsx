@@ -1,3 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+export default class Hello extends Component {
+  render() {
+    console.log( this.props);
+    let {firstName,lastName} = this.props;
+
+    return(
+      <div>
+        <div>firstName: {firstName}</div>
+        <div>lastName: {lastName}</div>
+      </div>
+    )
+  }
+}

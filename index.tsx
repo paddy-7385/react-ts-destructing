@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
+import HelloFunction from './HelloFunctionComp';
+
 import './style.css';
 
 interface AppProps { }
@@ -39,8 +41,6 @@ class App extends Component<AppProps, AppState> {
     console.log(lastName)
     console.log(rest)
     
-
-
     super(props);
     this.state = {
       name: 'React'
@@ -50,7 +50,9 @@ class App extends Component<AppProps, AppState> {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
+        {// <Hello firstName= "John" lastName = "smith" salary = {5000}/>
+        }
+        <HelloFunction firstName= "John1" lastName = "smith1" salary = {2000}/>
         <p>
           Start editing to see some magic happen :)
         </p>
